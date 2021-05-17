@@ -6,14 +6,16 @@
     private $durata;
     private $costo;
     private $autore;
+    private $status;
 
     // Construct
-    public function __construct($tipologia, $nome, $durata, $costo, $autore) {
+    public function __construct($tipologia, $nome, $durata, $costo, $autore, $status) {
       $this->tipologia = $tipologia;
       $this->nome = $nome;
       $this->durata = $durata;
       $this->costo = $costo;
       $this->autore = $autore;
+      $this->status = $status;
     }
 
     // Tipologia
@@ -59,6 +61,15 @@
 
     public function getAutore() {
       return $this->autore;
+    }
+
+    // Status
+    public function setStatus($status) {
+      $this->status = $status;
+    }
+
+    public function getStatus() {
+      return $this->status;
     }
 
   } // Chiusura Servizi
