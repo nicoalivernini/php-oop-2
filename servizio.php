@@ -7,6 +7,15 @@
     private $costo;
     private $autore;
 
+    // Construct
+    public function __construct($tipologia, $nome, $durata, $costo, $autore) {
+      $this->tipologia = $tipologia;
+      $this->nome = $nome;
+      $this->durata = $durata;
+      $this->costo = $costo;
+      $this->autore = $autore;
+    }
+
     // Tipologia
     public function setTipologia($tipologia) {
       $this->tipologia = $tipologia;
@@ -25,7 +34,7 @@
       return $this->nome;
     }
 
-    //Durata
+    // Durata
     public function setDurata($durata) {
       $this->durata = $durata;
     }
@@ -34,7 +43,7 @@
       return $this->durata;
     }
 
-    //Costo
+    // Costo
     public function setCosto($costo) {
       $this->costo = $costo;
     }
@@ -52,5 +61,5 @@
       return $this->autore;
     }
 
-  } //Chiusura Servizi
+  } // Chiusura Servizi
  ?>

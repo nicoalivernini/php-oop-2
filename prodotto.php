@@ -9,7 +9,18 @@
     private $prezzo;
     private $categoria;
 
-    //Tipologia
+    // Construct
+    public function __construct($tipologia, $nome, $marca, $peso, $fabbricazione, $prezzo, $categoria) {
+      $this->tipologia = $tipologia;
+      $this->nome = $nome;
+      $this->marca = $marca;
+      $this->peso = $peso;
+      $this->fabbricazione = $fabbricazione;
+      $this->prezzo = $prezzo;
+      $this->categoria = $categoria;
+    }
+
+    // Tipologia
     public function setTipologia($tipologia) {
       $this->tipologia = $tipologia;
     }
@@ -19,7 +30,7 @@
       return $this->tipologia;
     }
 
-    //Nome
+    // Nome
     public function setNome($nome) {
       $this->$nome = $nome;
     }
@@ -29,7 +40,7 @@
       return $this->$nome;
     }
 
-    //Cognome
+    // Cognome
     public function setCognome($cognome) {
       $this->$cognome = $cognome;
     }
@@ -39,7 +50,7 @@
       return $this->$cognome;
     }
 
-    //Marca
+    // Marca
     public function setMarca($marca) {
       $this->$marca = $marca;
     }
@@ -49,7 +60,7 @@
       return $this->$marca;
     }
 
-    //Peso
+    // Peso
     public function setPeso($peso) {
       $this->$peso = $peso;
     }
@@ -59,7 +70,7 @@
       return $this->$peso;
     }
 
-    //Fabbricazione
+    // Fabbricazione
     public function setFabbricazione($fabbricazione) {
       $this->$fabbricazione = $fabbricazione;
     }
@@ -69,7 +80,7 @@
       return $this->$fabbricazione;
     }
 
-    //Prezzo
+    // Prezzo
     public function setPrezzo($prezzo) {
       $this->$prezzo = $prezzo;
     }
@@ -79,7 +90,7 @@
       return $this->$prezzo;
     }
 
-    //Categoria
+    // Categoria
     public function setCategoria($categoria) {
       $this->$categoria = $categoria;
     }
@@ -89,6 +100,6 @@
       return $this->$categoria;
     }
 
-  } //Chiusura Prodotto
+  } // Chiusura Prodotto
 
  ?>

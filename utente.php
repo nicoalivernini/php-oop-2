@@ -7,7 +7,15 @@
     private $data_di_nascita;
 
 
-    //Nome
+    // Construct
+    public function __construct($nome, $cognome, $sesso, $data_di_nascita) {
+      $this->nome = $nome;
+      $this->cognome = $cognome;
+      $this->sesso = $sesso;
+      $this->data_di_nascita = $data_di_nascita;
+    }
+
+    // Nome
     public function setNome($nome) {
       $this->nome = $nome;
     }
@@ -16,7 +24,7 @@
       return $this->nome;
     }
 
-    //Cognome
+    // Cognome
     public function setCognome($cognome) {
       $this->cognome = $cognome;
     }
@@ -25,7 +33,7 @@
       return $this->cognome;
     }
 
-    //Sesso
+    // Sesso
     public function setSesso($sesso) {
       $this->sesso = $sesso;
     }
@@ -34,7 +42,7 @@
       return $this->sesso;
     }
 
-    //Data di nascita
+    // Data di nascita
     public function setDataDiNascita($data_di_nascita) {
       $this->data_di_nascita = $data_di_nascita;
     }
@@ -43,6 +51,6 @@
       return $this->data_di_nascita;
     }
 
-  } //Chiusura Utente
+  } // Chiusura Utente
 
  ?>
