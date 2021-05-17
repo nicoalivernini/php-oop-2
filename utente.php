@@ -5,7 +5,7 @@
     private $cognome;
     private $sesso;
     private $data_di_nascita;
-    private $metodo_di_pagamento
+    private $metodo_di_pagamento;
 
 
     // Construct

@@ -1,6 +1,6 @@
 <?php
 
-  class Servizi {
+  class Servizio {
     private $tipologia;
     private $nome;
     private $durata;
