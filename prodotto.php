@@ -7,6 +7,7 @@
     private $peso;
     private $fabbricazione;
     private $prezzo;
+    private $categoria;
 
     //Tipologia
     public function setTipologia($tipologia) {
@@ -76,6 +77,16 @@
 
     public function getPrezzo() {
       return $this->$prezzo;
+    }
+
+    //Categoria
+    public function setCategoria($categoria) {
+      $this->$categoria = $categoria;
+    }
+
+
+    public function getCategoria() {
+      return $this->$categoria;
     }
 
   } //Chiusura Prodotto
