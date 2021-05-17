@@ -1,16 +1,16 @@
 <?php
 
   require_once './utente.php';
-  require_once './prodotto.php';
-  require_once './servizio.php';
+  // require_once './prodotto.php';
+  // require_once './felpa.php';
 
-  $prodotto1 = new Prodotto('Cosmetico', 'Mascara', 'Kiko', '11,5ml', 'Made in China', '9.99', 'Cura della persona', 'Disponibile');
-  $prodotto2 = new Prodotto('Vestiario', 'T-shirt', 'H&M', 'M', 'Made in China', '19.99', 'Cura della persona', 'Non disponibile');
 
-  $servizio1 = new Servizio('Marketing', 'Facebook ADS', '2 mesi', '249.99', 'Robert Gnu', 'Disponibile');
-  $servizio2 = new Servizio('Cura della casa', 'Cura il tuo orto', '15 ore', 'Free', 'Trore poil', 'Disponibile');
+  $nico = new Utente('Nicolo', 'Alivernini', 'Maschio', '19-09-1995', 'Carta di credito', '5333-0000-0000-0000', 'Nicolò Alivernini', '05-24', 'Mastercard', '123');
+  // $prodotto1 = new Felpa('H&M', 'L', '19.99', 'Felpa', 'Made in China', 'Vestiti', 'Disponibile');
 
-  var_dump($prodotto1, $prodotto2, $servizio1, $servizio2);
+  // $prodotto2 = new Prodotto('Vestiario', 'T-shirt', 'H&M', 'M', 'Made in China', '19.99', 'Cura della persona', 'Non disponibile');
+
+  var_dump($nico, $prodotto1);
 
 
  ?>

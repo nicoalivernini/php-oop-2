@@ -1,23 +1,15 @@
 <?php
 
   class Prodotto {
-    private $tipologia;
-    private $nome;
-    private $marca;
-    private $misura;
-    private $fabbricazione;
-    private $prezzo;
-    private $categoria;
-    private $status;
+    public $tipologia;
+    public $fabbricazione;
+    public $categoria;
+    public $status;
 
     // Construct
-    public function __construct($tipologia, $nome, $marca, $misura, $fabbricazione, $prezzo, $categoria, $status) {
+    public function __construct($tipologia, $fabbricazione, $categoria, $status) {
       $this->tipologia = $tipologia;
-      $this->nome = $nome;
-      $this->marca = $marca;
-      $this->misura = $misura;
       $this->fabbricazione = $fabbricazione;
-      $this->prezzo = $prezzo;
       $this->categoria = $categoria;
       $this->status = $status;
     }
@@ -32,16 +24,6 @@
       return $this->tipologia;
     }
 
-    // Nome
-    public function setNome($nome) {
-      $this->nome = $nome;
-    }
-
-
-    public function getNome() {
-      return $this->nome;
-    }
-
     // Cognome
     public function setCognome($cognome) {
       $this->cognome = $cognome;
@@ -52,26 +34,6 @@
       return $this->cognome;
     }
 
-    // Marca
-    public function setMarca($marca) {
-      $this->marca = $marca;
-    }
-
-
-    public function getMarca() {
-      return $this->marca;
-    }
-
-    // Misura
-    public function setMisura($misura) {
-      $this->misura = $misura;
-    }
-
-
-    public function getMisura() {
-      return $this->misura;
-    }
-
     // Fabbricazione
     public function setFabbricazione($fabbricazione) {
       $this->fabbricazione = $fabbricazione;
@@ -80,16 +42,6 @@
 
     public function getFabbricazione() {
       return $this->fabbricazione;
-    }
-
-    // Prezzo
-    public function setPrezzo($prezzo) {
-      $this->prezzo = $prezzo;
-    }
-
-
-    public function getPrezzo() {
-      return $this->prezzo;
     }
 
     // Categoria

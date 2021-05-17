@@ -1,6 +1,10 @@
 <?php
 
+  require_once './carta-di-credito.php';
+
   class Utente {
+    use CartaDiCredito;
+
     private $nome;
     private $cognome;
     private $sesso;
@@ -9,12 +13,17 @@
 
 
     // Construct
-    public function __construct($nome, $cognome, $sesso, $data_di_nascita, $metodo_di_pagamento) {
+    public function __construct($nome, $cognome, $sesso, $data_di_nascita, $metodo_di_pagamento, $numero_carta, $intestatario, $scadenza_carta, $circuito, $cvv) {
       $this->nome = $nome;
       $this->cognome = $cognome;
       $this->sesso = $sesso;
       $this->data_di_nascita = $data_di_nascita;
       $this->metodo_di_pagamento = $metodo_di_pagamento;
+      $this->setNumeroCarta($numero_carta);
+      $this->setIntestatario($intestatario);
+      $this->setScadenzaCarta($scadenza_carta);
+      $this->setCircuito($circuito);
+      $this->setCvv($cvv);
     }
 
     // Nome
