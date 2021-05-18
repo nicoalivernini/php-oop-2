@@ -1,11 +1,20 @@
 <?php
 
-  trait CartaDiCredito {
+  class CartaDiCredito {
     private $numero_carta;
     private $intestatario;
     private $scadenza_carta;
     private $circuito;
     private $cvv;
+
+    // Construct
+    public function __construct($numero_carta, $intestatario, $scadenza_carta, $circuito, $cvv) {
+      $this->numero_carta = $numero_carta;
+      $this->intestatario = $intestatario;
+      $this->scadenza_carta = $scadenza_carta;
+      $this->circuito = $circuito;
+      $this->cvv = $cvv;
+    }
 
     // Numero carta
     public function setNumeroCarta($numero_carta) {

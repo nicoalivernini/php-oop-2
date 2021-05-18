@@ -1,29 +1,25 @@
 <?php
 
-  require_once './carta-di-credito.php';
-
   class Utente {
-    use CartaDiCredito;
 
     private $nome;
     private $cognome;
     private $sesso;
     private $data_di_nascita;
-    private $metodo_di_pagamento;
+    protected $carta_di_credito;
 
 
     // Construct
-    public function __construct($nome, $cognome, $sesso, $data_di_nascita, $metodo_di_pagamento, $numero_carta, $intestatario, $scadenza_carta, $circuito, $cvv) {
+    public function __construct($nome, $cognome, $sesso, $data_di_nascita) {
       $this->nome = $nome;
       $this->cognome = $cognome;
       $this->sesso = $sesso;
       $this->data_di_nascita = $data_di_nascita;
-      $this->metodo_di_pagamento = $metodo_di_pagamento;
-      $this->setNumeroCarta($numero_carta);
-      $this->setIntestatario($intestatario);
-      $this->setScadenzaCarta($scadenza_carta);
-      $this->setCircuito($circuito);
-      $this->setCvv($cvv);
+    }
+
+    // Carta di credito
+    public function setCartaDiCredito($carta_di_credito) {
+      $this->carta_di_credito = $carta_di_credito;
     }
 
     // Nome
@@ -60,15 +56,6 @@
 
     public function getDataDiNascita() {
       return $this->data_di_nascita;
-    }
-
-    // Metodo di pagamento
-    public function setMetodoDiPagamento($metodo_di_pagamento) {
-      $this->metodo_di_pagamento = $metodo_di_pagamento;
-    }
-
-    public function getMetodoDiPagamento() {
-      return $this->metodo_di_pagamento;
     }
 
   } // Chiusura Utente
